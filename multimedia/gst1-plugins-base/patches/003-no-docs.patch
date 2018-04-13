@@ -1,0 +1,17 @@
+diff -u --recursive gst-plugins-base-1.12.4-vanilla/Makefile.am gst-plugins-base-1.12.4/Makefile.am
+--- gst-plugins-base-1.12.4-vanilla/Makefile.am	2018-02-11 09:55:52.832424735 -0500
++++ gst-plugins-base-1.12.4/Makefile.am	2018-02-11 09:56:32.742506969 -0500
+@@ -11,13 +11,11 @@
+ 	gst-libs 		\
+ 	gst sys $(SUBDIRS_EXT) 	\
+ 	tools 			\
+-	docs			\
+ 	common 			\
+ 	m4
+ 
+ DIST_SUBDIRS = 			\
+ 	pkgconfig		\
+-	docs			\
+ 	gst-libs		\
+ 	gst sys ext		\
+ 	tools 			\

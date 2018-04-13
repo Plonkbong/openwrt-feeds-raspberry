@@ -1,0 +1,17 @@
+diff -u --recursive gst-plugins-bad-1.12.4-vanilla/Makefile.am gst-plugins-bad-1.12.4/Makefile.am
+--- gst-plugins-bad-1.12.4-vanilla/Makefile.am	2018-02-11 19:46:16.980758692 -0500
++++ gst-plugins-bad-1.12.4/Makefile.am	2018-02-11 19:46:49.443833603 -0500
+@@ -2,11 +2,11 @@
+ 
+ SUBDIRS = \
+ 	gst-libs gst sys ext pkgconfig \
+-	m4 common docs tests tools
++	m4 common docs tools
+ 
+ DIST_SUBDIRS = \
+ 	gst gst-libs sys ext pkgconfig \
+-	m4 common docs tests tools
++	m4 common docs tools
+ 
+ # include before EXTRA_DIST for win32 assignment
+ include $(top_srcdir)/common/win32.mak
