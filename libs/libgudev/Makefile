@@ -20,7 +20,7 @@ PKG_INSTALL:=1
 
 PKG_LICENSE:=LGPL-2
 PKG_LICENSE_FILES:=COPYING
-PKG_MAINTAINER:=Bongo79 <albongo79@yandex.com>
+PKG_MAINTAINER:=Plonkbong <plonkbong100@protonmail.com>
 
 include $(INCLUDE_DIR)/package.mk
 

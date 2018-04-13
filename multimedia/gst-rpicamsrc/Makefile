@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 OpenWrt.org
+# Copyright (C) 2018 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -22,7 +22,7 @@ PKG_FIXUP:=autoreconf
 
 PKG_LICENSE:=LGPL-2
 PKG_LICENSE_FILES:=COPYING.LGPL
-PKG_MAINTAINER:=Bongo79 albongo79@yandex.com
+PKG_MAINTAINER:=Plonkbong <plonkbong100@protonmail.com>
 
 include $(INCLUDE_DIR)/package.mk
 

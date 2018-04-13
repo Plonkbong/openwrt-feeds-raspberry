@@ -21,7 +21,7 @@ PKG_SOURCE_PROTO:=git
 
 PKG_LICENSE:=BSD 3-Clause
 PKG_LICENSE_FILES:=LICENCE
-PKG_MAINTAINER:=Bongo79 <albongo79@yandex.com>
+PKG_MAINTAINER:=Plonkbong <plonkbong100@protonmail.com>
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
