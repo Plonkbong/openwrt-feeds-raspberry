@@ -268,6 +268,25 @@ define GstBuildPlugin
   $$(eval $$(call BuildPackage,gst1-mod-$(1)))
 endef
 
+
+define Package/gst1-plugins-base-rest
+  CATEGORY:=Multimedia
+  SECTION:=multimedia
+  TITLE+= all rest files modules, from gst1-plugins-base
+  URL:=http://gstreamer.freedesktop.org/
+  DEPENDS+= +gst1-plugins-base 
+  # +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp 
+endef
+
+define Package/gst1-plugins-base-rest/description
+  This package contains all rest files from gst1-plugins-base
+endef
+
+define Package/gst1-plugins-base-rest/install
+	./install-rest.sh $(TOPDIR) $(PKG_BUILD_DIR) $(PKG_INSTALL_DIR) $(1)
+endef
+
+
 $(eval $(call GstBuildPlugin,alsa,ALSA,audio tag,,+alsa-lib))
 $(eval $(call GstBuildPlugin,app,app,app,,))
 $(eval $(call GstBuildPlugin,audioconvert,audio format conversion,audio,,))
@@ -290,3 +309,5 @@ $(eval $(call GstBuildPlugin,vorbis,Vorbis,audio tag,ogg,+libvorbis))
 
 $(eval $(call BuildPackage,gstreamer1-plugins-base))
 $(eval $(call BuildPackage,gst1-plugins-base))
+
+$(eval $(call BuildPackage,gst1-plugins-base-rest))

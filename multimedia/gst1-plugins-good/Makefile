@@ -168,6 +168,27 @@ define GstBuildPlugin
   $$(eval $$(call BuildPackage,gst1-mod-$(1)))
 endef
 
+
+
+define Package/gst1-plugins-good-rest
+  CATEGORY:=Multimedia
+  SECTION:=multimedia
+  TITLE+= all rest files modules, from gst1-plugins-good
+  URL:=http://gstreamer.freedesktop.org/
+  DEPENDS+= +gst1-plugins-good 
+  # +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp 
+endef
+
+define Package/gst1-plugins-good-rest/description
+  This package contains all rest files from gst1-plugins-good
+endef
+
+define Package/gst1-plugins-good-rest/install
+	./install-rest.sh $(TOPDIR) $(PKG_BUILD_DIR) $(PKG_INSTALL_DIR) $(1)
+endef
+
+
+
 #$(eval $(call GstBuildPlugin,1394,IEEE 1394 support,,,))
 $(eval $(call GstBuildPlugin,alaw,alaw codec,audio,,))
 $(eval $(call GstBuildPlugin,alpha,alpha support,video,,))
@@ -236,3 +257,5 @@ $(eval $(call GstBuildPlugin,mpg123,MP3 decoder (using mpg123),audio tag,,+libid
 
 $(eval $(call BuildPackage,gstreamer1-plugins-good))
 $(eval $(call BuildPackage,gst1-plugins-good))
+
+$(eval $(call BuildPackage,gst1-plugins-good-rest))
