@@ -63,11 +63,11 @@ endef
 define Build/Prepare
 	$(call Build/Prepare/Default)
 	
-	$(RM) -r $(KERNELSRC_DRV_DIR) # this works correctly
-	echo "$(wildcard $(KERNELSRC_DRV_DIR)/Makefile)" # this works sometimes why ?
-	read
+	#$(RM) -r $(KERNELSRC_DRV_DIR) # this works correctly
+	#echo "$(wildcard $(KERNELSRC_DRV_DIR)/Makefile)" # this works sometimes why ?
+	#read
 	
-  ifeq ("$(wildcard $(KERNELSRC_DRV_DIR)/Makefile)","") # this fail sometimes because wildcard does not wor correctly
+  ifeq ("$(wildcard $(KERNELSRC_DRV_DIR)/Makefile)","") # this fail sometimes because wildcard does not works correctly
 		$(eval $(call Download,kernelsource))
 		mkdir -p $(LINUX_DIR)
 		( $(TAR) -kxf $(DL_DIR)/$(KERNELSRC_FILE) --strip=1 -C $(LINUX_DIR) || exit 0; )
