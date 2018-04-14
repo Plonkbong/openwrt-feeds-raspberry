@@ -44,6 +44,7 @@ For all kernel libs and utils packages:
 	make package/libx264/compile V=99 || read; make package/libgudev/compile V=99 || read; make package/usbtv/compile V=99 || read; make package/v4l2loopback/compile V=99 || read; make package/eudev/compile V=99 || read;
 	
 For all gstreamer main packages:
+
 	make package/gst1-libav/compile V=99 || read; make package/gstreamer1/compile V=99 || read; make package/gst1-plugins-base/compile V=99 || read; make package/gst1-plugins-good/compile V=99 || read; make package/gst1-plugins-bad/compile V=99 || read; make package/gst1-plugins-ugly/compile V=99 || read;
 	
 For rest multimedia packages:
