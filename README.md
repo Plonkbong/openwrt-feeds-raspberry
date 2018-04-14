@@ -4,8 +4,9 @@ some extra packages and updates for openwrt on raspberry-pi-1b
 
 
 ## Build with Openwrt SDK:
-=========================
+
 Download and unpack the SDK
+
 	wget -O - https://downloads.openwrt.org/snapshots/targets/brcm2708/bcm2708/openwrt-sdk-brcm2708-bcm2708_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz | tar -xJ
 	cd ./openwrt-sdk-brcm2708-bcm2708_gcc-7.3.0_musl_eabi.Linux-x86_64
 	
@@ -37,3 +38,4 @@ For all gstreamer main packages:
 	make package/gst1-libav/compile V=99 || read; make package/gstreamer1/compile V=99 || read; make package/gst1-plugins-base/compile V=99 || read; make package/gst1-plugins-good/compile V=99 || read; make package/gst1-plugins-bad/compile V=99 || read; make package/gst1-plugins-ugly/compile V=99 || read;
 For rest multimedia packages:
 	make package/ffmpeg/compile V=99 || read; make package/rpiuserland/compile V=99 || read; make package/gst-rpicamsrc/compile V=99 || read; make package/gst1-rtsp-server/compile V=99 || read; make package/v4l2rtspserver/compile V=99 || read; make package/v4l2tools/compile V=99 || read;
+
