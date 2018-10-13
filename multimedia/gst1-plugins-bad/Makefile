@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-bad
-#PKG_VERSION:=1.12.4
-PKG_VERSION:=1.14.0
+#PKG_VERSION:=1.14.3
+PKG_VERSION:=1.14.4
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
@@ -21,8 +21,8 @@ PKG_LICENSE_FILES:=COPYING.LIB COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-bad-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-bad-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-bad/
-#PKG_HASH:=0c7857be16686d5c1ba6e34bd338664d3d4599d32714a8eca5c8a41a101e2d08
-PKG_HASH:=ed5e2badb6f2858f60017b93334d91fe58a0e3f85ed2f37f2e931416fafb4f9f
+PKG_HASH:=910b4e0e2e897e8b6d06767af1779d70057c309f67292f485ff988d087aa0de5
+#PKG_HASH:=b2224e5d9c1b85ad51233f6135524bb9e16a9172d395edc79c73b89094659fd5
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -53,7 +53,7 @@ $(call Package/gstreamer1-bad/Default)
   HIDDEN:=1
 endef
 
-define Package/gts1-plugins-bad/description
+define Package/gst1-plugins-bad/description
 $(call Package/gstreamer1-bad/description/Default)
  .
  This meta package contains only dependencies to the other plugins from
@@ -255,7 +255,7 @@ define Package/gst1-plugins-bad-rest
   SECTION:=multimedia
   TITLE+= all rest files modules, from gst1-plugins-bad
   URL:=http://gstreamer.freedesktop.org/
-  DEPENDS+= $(GST_DEPENDS) +gst1-plugins-base +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp 
+  DEPENDS+= $(GST_DEPENDS) +gst1-plugins-base +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp +fdk-aac
 endef
 
 define Package/gst1-plugins-bad-rest/description

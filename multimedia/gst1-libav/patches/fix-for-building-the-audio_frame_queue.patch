@@ -1,0 +1,11 @@
+diff -aruN a/gst-libs/ext/libav/libavcodec/Makefile b/gst-libs/ext/libav/libavcodec/Makefile
+--- a/gst-libs/ext/libav/libavcodec/Makefile	2018-09-16 15:30:22.000000000 +0000
++++ b/gst-libs/ext/libav/libavcodec/Makefile	2018-09-30 08:33:44.913761893 +0000
+@@ -50,6 +50,7 @@
+        utils.o                                                          \
+        vorbis_parser.o                                                  \
+        xiph.o                                                           \
++       audio_frame_queue.o						\
+ 
+ # subsystems
+ OBJS-$(CONFIG_AANDCTTABLES)            += aandcttab.o

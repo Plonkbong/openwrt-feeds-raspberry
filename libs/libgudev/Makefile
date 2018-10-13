@@ -29,7 +29,7 @@ define Package/libgudev
   SECTION:=libs
   CATEGORY:=Libraries
   URL:=https://wiki.gnome.org/Projects/libgudev
-  DEPENDS:= +libudev +glib2
+  DEPENDS:= +eudev +glib2
 endef
 
 define Package/libgudev/description

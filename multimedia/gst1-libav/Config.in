@@ -311,5 +311,9 @@ config GST1_LIBAV_PROTOCOL_udp
 	bool "udp:"
 	default y
 	
+config GST1_LIBAV_CONFIG_audio_frame_queue
+	bool "audio_frame_queue"
+	default y
+	
 endmenu
 

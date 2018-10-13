@@ -39,7 +39,7 @@ define Package/eudev
   MENU:=1
   DEPENDS:=+EUDEV_EXTRA_blkid:libblkid +EUDEV_EXTRA_kmod:libkmod +librt +libudev
   PROVIDES:=udev
-  CONFLICTS:=udev
+  CONFLICTS:=udev libudev-fbsd
 endef
 
 define Package/eudev/description

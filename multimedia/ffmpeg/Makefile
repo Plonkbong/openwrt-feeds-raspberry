@@ -293,7 +293,7 @@ $(call Package/libffmpeg/Default)
  DEPENDS+= @!ALL \
            +FFMPEG_CUSTOM_SELECT_libopus:libopus \
            +PACKAGE_libx264:libx264 +PACKAGE_lame-lib:lame-lib \
-           +FFMPEG_CUSTOM_SELECT_libshine:shine \
+           +FFMPEG_CUSTOM_SELECT_libshine:shine +shine \
            +PACKAGE_fdk-aac:fdk-aac
  VARIANT:=custom
  MENU:=1
@@ -329,7 +329,7 @@ $(call Package/libffmpeg/Default)
  TITLE+= (full)
  DEPENDS+= @BUILD_PATENTED +alsa-lib +PACKAGE_libopus:libopus
  ifeq ($(CONFIG_SOFT_FLOAT),y)
-	DEPENDS+= +PACKAGE_shine:shine
+	DEPENDS+= +PACKAGE_shine:shine +shine
  else
 	DEPENDS+= +PACKAGE_lame-lib:lame-lib +PACKAGE_libx264:libx264
  endif

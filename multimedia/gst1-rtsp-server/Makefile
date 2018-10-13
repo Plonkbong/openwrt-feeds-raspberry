@@ -8,7 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-rtsp-server
-PKG_VERSION:=1.14.0
+#PKG_VERSION:=1.14.3
+PKG_VERSION:=1.14.4
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Plonkbong <plonkbong100@protonmail.com>
@@ -19,7 +20,8 @@ PKG_LICENSE_FILES:=COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-rtsp-server-$(PKG_VERSION)
 PKG_SOURCE:=gst-rtsp-server-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-rtsp-server/
-PKG_HASH:=6b65a077bed815f6d3157ebea503cc9f3c32d289af2756b7ff7e3958744d9756
+PKG_HASH:=3d0ece2afdcd601c175ece24e32a30bc19247b454f4eafd3deeec2533c6884f1
+#PKG_HASH:=1f654c7617af15d13b67bf833f4c81d086ecbfd8cce7f2bf65fe5c1c3519f4e6
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
