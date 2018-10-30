@@ -63,7 +63,7 @@ endef
 define Package/gstreamer1-plugins-good
   $(call Package/gstreamer1-good/Default)
   TITLE+= plugins collection (good)
-  DEPENDS:=+ALL:gst1-plugins-good +gstreamer1-plugins-base
+  DEPENDS:=+ALL:gst1-plugins-good +gstreamer1-plugins-base +libsoup
 endef
 
 define Package/gstreamer1-plugins-good/config
