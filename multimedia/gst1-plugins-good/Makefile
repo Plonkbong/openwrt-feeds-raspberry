@@ -8,8 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-good
-#PKG_VERSION:=1.14.3
-PKG_VERSION:=1.14.4
+PKG_VERSION:=1.15.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
@@ -21,8 +20,7 @@ PKG_LICENSE_FILES:=COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-good-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-good-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-good/
-PKG_HASH:=5f8b553260cb0aac56890053d8511db1528d53cae10f0287cfce2cb2acc70979
-#PKG_HASH:=5112bce6af0be62760687ca47873c90ce4d65d3fe920a3adf8145db7b07bff5d
+PKG_HASH:=b805962a2d777ff6145f6ca2ca8458499c9e23236cbcc41787c69ac51b02c818
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -118,6 +116,7 @@ CONFIGURE_ARGS += \
 	--disable-xshm \
 	--disable-xvideo \
 	--disable-zlib \
+	--disable-fatal-warnings \
 	\
 	--without-libiconv-prefix \
 	--without-libintl-prefix \

@@ -8,8 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-libav
-#PKG_VERSION:=1.14.0
-PKG_VERSION:=1.14.4
+PKG_VERSION:=1.15.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
@@ -17,9 +16,7 @@ PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
 
 PKG_SOURCE:=gst-libav-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-libav
-#PKG_HASH:=fb134b4d3e054746ef8b922ff157b0c7903d1fdd910708a45add66954da7ef89
-#PKG_HASH:=9b03529bb45785ad1b6b1f4856c52a832ad5fc472285ce49174439e8015ab677
-PKG_HASH:=dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da
+PKG_HASH:=96241130cb0067e01925a7cfe084dcf05941f139eb1ab45e5556c3f95120ce49
 
 PKG_LICENSE:=GPL-2.0 LGPL-2.0
 PKG_LICENSE_FILES:=COPYING COPYING.LIB
@@ -187,7 +184,8 @@ CONFIGURE_ARGS += \
 	--disable-fma4 \
 	--disable-avx2 \
 	--disable-inline-asm \
-	--disable-yasm"
+	--disable-yasm" \
+	--disable-fatal-warnings
 
 TARGET_CFLAGS += -D_GNU_SOURCE
 

@@ -8,8 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-rtsp-server
-#PKG_VERSION:=1.14.3
-PKG_VERSION:=1.14.4
+PKG_VERSION:=1.15.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Plonkbong <plonkbong100@protonmail.com>
@@ -20,8 +19,7 @@ PKG_LICENSE_FILES:=COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-rtsp-server-$(PKG_VERSION)
 PKG_SOURCE:=gst-rtsp-server-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-rtsp-server/
-PKG_HASH:=3d0ece2afdcd601c175ece24e32a30bc19247b454f4eafd3deeec2533c6884f1
-#PKG_HASH:=1f654c7617af15d13b67bf833f4c81d086ecbfd8cce7f2bf65fe5c1c3519f4e6
+PKG_HASH:=11d455f6ac8544eb8d8a014a1046d284800c1c80c93ae6b43b20a5fd1921b4c5
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -59,6 +57,9 @@ $(call Package/$(PKG_NAME)/description)
 endef
 
 
+CONFIGURE_ARGS += \
+	--disable-fatal-warnings
+
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/lib
@@ -73,7 +74,6 @@ define Build/InstallDev
 endef
 
 
-
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/lib/
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/*.so* $(1)/usr/lib/
@@ -81,11 +81,11 @@ define Package/$(PKG_NAME)/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/gstreamer-1.0/*.so* $(1)/usr/lib/gstreamer-1.0
 endef
 
+
 define Package/$(PKG_NAME)-examples/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(CP) $(PKG_BUILD_DIR)/examples/.libs/* $(1)/usr/bin
 endef 
-
 
 
 $(eval $(call BuildPackage,$(PKG_NAME)))

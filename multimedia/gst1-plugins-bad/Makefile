@@ -8,8 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-bad
-#PKG_VERSION:=1.14.3
-PKG_VERSION:=1.14.4
+PKG_VERSION:=1.15.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
@@ -21,8 +20,7 @@ PKG_LICENSE_FILES:=COPYING.LIB COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-bad-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-bad-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-bad/
-PKG_HASH:=910b4e0e2e897e8b6d06767af1779d70057c309f67292f485ff988d087aa0de5
-#PKG_HASH:=b2224e5d9c1b85ad51233f6135524bb9e16a9172d395edc79c73b89094659fd5
+PKG_HASH:=eafbb705190ca6dbf0e5dfbe1bc3d0f217fbc2a828037b5ede12d3611b9f9bd7
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -153,6 +151,8 @@ CONFIGURE_ARGS += \
 	--disable-schro \
 	--disable-zbar \
 	--disable-srtp \
+	--disable-fatal-warnings \
+	\
 	--enable-videoparsers=yes \
 	--enable-uvch264=yes \
 	\
@@ -255,7 +255,7 @@ define Package/gst1-plugins-bad-rest
   SECTION:=multimedia
   TITLE+= all rest files modules, from gst1-plugins-bad
   URL:=http://gstreamer.freedesktop.org/
-  DEPENDS+= $(GST_DEPENDS) +gst1-plugins-base +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp +fdk-aac
+  DEPENDS+= $(GST_DEPENDS) +gst1-plugins-base +libgstreamer1 +libgst1pbutils $(ICONV_DEPENDS) +libstdcpp +fdk-aac +libopenssl
 endef
 
 define Package/gst1-plugins-bad-rest/description

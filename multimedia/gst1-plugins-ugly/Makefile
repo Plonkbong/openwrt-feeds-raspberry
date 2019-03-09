@@ -8,8 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gst1-plugins-ugly
-#PKG_VERSION:=1.14.3
-PKG_VERSION:=1.14.4
+PKG_VERSION:=1.15.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=W. Michael Petullo <mike@flyn.org> \
@@ -21,8 +20,7 @@ PKG_LICENSE_FILES:=COPYING
 PKG_BUILD_DIR:=$(BUILD_DIR)/gst-plugins-ugly-$(PKG_VERSION)
 PKG_SOURCE:=gst-plugins-ugly-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://gstreamer.freedesktop.org/src/gst-plugins-ugly/
-PKG_HASH:=ac02d837f166c35ff6ce0738e281680d0b90052cfb1f0255dcf6aaca5f0f6d23
-#PKG_HASH:=43847fc4d1eae26dd48a6a93d0460146f5f0802582a7e8a9cc66f09dcb0b2306
+PKG_HASH:=6e802c63680ac24b6970a35b3001e5c96e57f1b19814cd3916d52a32d33123b2
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_PACKAGE_gst1-mod-asf \
@@ -117,6 +115,8 @@ CONFIGURE_ARGS += \
 	--disable-mpegstream \
 	--disable-realmedia \
 	--disable-sidplay \
+	--disable-fatal-warnings \
+	\
 	--disable-synaesthesia \
 	--disable-twolame \
 	--enable-x264 \
